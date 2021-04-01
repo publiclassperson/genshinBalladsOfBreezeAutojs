@@ -14,7 +14,7 @@ const addresses = {
     , ll: [320, 1150]
 }
 //初始化随机延迟
-const delay = random(450, 460)
+const delay = random(250, 400)
 //中间颜色色值
 const destColor = "#fffbf2";
 //相似度
@@ -27,18 +27,18 @@ while (true) {
 }
 
 
-function consoleSHOW() {
-    //获取设备宽度
-    var devWidth = device.width;
-    //获取设备高度
-    var devHeight = device.height;
+// function consoleSHOW() {
+//     //获取设备宽度
+//     var devWidth = device.width;
+//     //获取设备高度
+//     var devHeight = device.height;
 
-    //设置控制台显示大小与位置
-    console.show();
-    console.setSize(500, 500);
-    console.setPosition(devWidth / 16, devHeight / 16);
-    // n = console.rawI11112nput("请输入数字1开始弹琴:")
-}
+//     //设置控制台显示大小与位置
+//     console.show();
+//     console.setSize(500, 500);
+//     console.setPosition(devWidth / 16, devHeight / 16);
+//     // n = console.rawI11112nput("请输入数字1开始弹琴:")
+// }
 
 //等待原神打开
 function waitForYuanshen() {
@@ -59,7 +59,7 @@ function findWhitePoint() {
         let x = addresses[k][0];
         let y = addresses[k][1];
 
-        let flag = similarCheck(cs, x, y);
+        let flag = similarCheck( x, y);
         let rd = random(-10, 10)
         flag && arr.push({ x: x + rd, y: y + rd });
     }
